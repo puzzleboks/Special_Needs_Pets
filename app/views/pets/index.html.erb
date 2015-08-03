@@ -1,0 +1,16 @@
+<h1>Listing your pets</h1>
+<%= form_for([current_user, current_user.pets.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<ul>
+  <% @pets.each do |pet| %>
+  <li><%= pet.name %></li>
+  <% end %>
+</ul>

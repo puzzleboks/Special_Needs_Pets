@@ -1,12 +1,15 @@
 # Project 2: Special Needs Pets
 
-**Trello Schedule**
+**Trello Schedule:**
+
 https://trello.com/b/baNp2PTF
 
-**Entity Relationship Diagram**
+**Entity Relationship Diagram:**
+
 https://www.lucidchart.com/invitations/accept/e93d5ce6-29ac-421a-b826-bfce04834f24
 
-**Wireframes**
+**Wireframes:**
+
 
 
 **User Stories:**

@@ -1,4 +1,60 @@
-<ul>
+<!-- <ul> -->
   <!-- <li><%#= image_tag(@pet.pict_url, class: "img-circle") %></li> -->
-  <li><%= @pet.name %></li>
-</ul>
+  <!-- <li><%#= @pet.name %></li> -->
+<!-- </ul> -->
+<div class="pets show">
+  <h2><%= @pet.name %></h2>
+
+  <%= link_to("Edit Pet", edit_pet_path(@pet), :class => 'action edit') %>
+
+  <table class="detail" summary="Pet detail">
+    <!-- <tr class="header">
+      <th>&nbsp;</th>
+      <th>Pet</th>
+      <th>Actions</th>
+    </tr> -->
+    <tr>
+      <td><%= image_tag(@pet.pict_url, width: '200', height: '200') %></td>
+      <td>
+        <table>
+          <tr>
+            <!-- <td><%#= @pet.name %></td> -->
+          </tr>
+          <tr>
+            <td><%= @pet.breed %></td>
+          </tr>
+          <tr>
+            <td><%= @pet.vet %></td>
+          </tr>
+          <tr>
+            <td class="actions">
+              <%#= link_to("Show", pet_path(@pet), :class => 'action show') %>
+              <%#= link_to("Edit", edit_pet_path(@pet), :class => 'action edit') %>
+              <%#= link_to "Delete", pet_path(pet) %>
+              <%#= link_to "Remove", pet_path(pet), :method => :delete, :data => {:confirm => "You Sure?"} %>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+    </tr>
+  </table>
+
+  <h2> Special Needs</h2>
+  <ul>
+    <%# @pet.special_needs.each do |special_need| %>
+      <li>
+        <%#= special_need.title %>
+        <h3>Treatments</h3>
+        <ul>
+        <%# special_need.treatments.each do |treatment| %>
+          <li>
+            <%#= treatment.title %>
+          </li>
+        <%# end %>
+        </ul>
+
+      </li>
+    <%# end %>
+  </ul>
+</div>

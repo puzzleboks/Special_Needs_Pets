@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   # alias user routes for account
   devise_for :users, :path => 'accounts'
 
-  # next post resource under user
-  resources :users do
-    resources :pets
+
+  resources :pets do
+    resources :needs
+  end
+
+  resources :needs do
+    resources :treatments
   end
 
   #devise_for :users

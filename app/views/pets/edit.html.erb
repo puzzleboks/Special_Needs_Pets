@@ -1,7 +1,7 @@
 <h2>Edit Pet</h2>
 
-<%= render partial: "form" %>
+<%= render partial: "form_new" %>
 
-<%= form_for [current_user, @pet], method: :delete do |f| %>
+<%= form_for @pet, method: :delete do |f| %>
   <%= f.submit "Delete!", class: "delete" %>
 <% end %>

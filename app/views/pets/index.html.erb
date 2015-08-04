@@ -18,23 +18,23 @@
 <div class="pets index">
   <h2>User: <%= current_user.email %></h2>
 
-  <%= link_to("Add New Pet", new_user_pet_path(current_user, @pet), :class => 'action new') %>
+  <%= link_to("Add New Pet", new_pet_path(@pet), :class => 'action new') %>
 
   <table class="listing" summary="Pet list">
     <tr class="header">
-      <th>&nbsp;</th>
-      <th>Pet</th>
-      <th>Actions</th>
+      <!-- <th>&nbsp;</th> -->
+      <!-- <th>Pet</th> -->
+      <!-- <th>Actions</th> -->
     </tr>
     <% @pets.each do |pet| %>
     <tr>
       <td><%= image_tag(pet.pict_url) %></td>
       <td><%= pet.name %></td>
       <td class="actions">
-        <%= link_to("Show", user_pet_path(current_user, pet), :class => 'action show') %>
-        <%= link_to("Edit", edit_user_pet_path(current_user, pet), :class => 'action edit') %>
-        <%#= link_to "Delete", user_pet_path(current_user, pet) %>
-        <%#= link_to "Remove", user_pet_path(current_user, pet), :method => :delete, :data => {:confirm => "You Sure?"} %>
+        <%= link_to("Show", pet_path(pet), :class => 'action show') %>
+        <%#= link_to("Edit", edit_pet_path(pet), :class => 'action edit') %>
+        <%#= link_to "Delete", pet_path(pet) %>
+        <%#= link_to "Remove", pet_path(pet), :method => :delete, :data => {:confirm => "You Sure?"} %>
       </td>
     </tr>
     <% end %>

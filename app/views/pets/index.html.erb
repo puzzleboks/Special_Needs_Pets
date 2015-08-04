@@ -1,7 +1,7 @@
 <!-- <h1>Listing your pets</h1> -->
 <%#= form_for([current_user, current_user.pets.build]) do |f| %>
   <!-- <p> -->
-    <%#= f.label :name %><br>
+    <!-- <%#= f.label :name %><br> -->
     <%#= f.text_field :name %>
   <!-- </p> -->
   <!-- <p> -->
@@ -16,9 +16,9 @@
 <!-- </ul> -->
 
 <div class="pets index">
-  <h2><%= current_user.email %></h2>
+  <h2>User: <%= current_user.email %></h2>
 
-  <%= link_to("Add New Pet", '#', :class => 'action new') %>
+  <%= link_to("Add New Pet", new_user_pet_path(current_user, @pet), :class => 'action new') %>
 
   <table class="listing" summary="Pet list">
     <tr class="header">
@@ -28,12 +28,13 @@
     </tr>
     <% @pets.each do |pet| %>
     <tr>
-      <td><%= pet.breed %></td>
+      <td><%= image_tag(pet.pict_url) %></td>
       <td><%= pet.name %></td>
       <td class="actions">
         <%= link_to("Show", user_pet_path(current_user, pet), :class => 'action show') %>
-        <%= link_to("Edit", '#', :class => 'action edit') %>
-        <%= link_to("Delete", '#', :class => 'action delete') %>
+        <%= link_to("Edit", edit_user_pet_path(current_user, pet), :class => 'action edit') %>
+        <%#= link_to "Delete", user_pet_path(current_user, pet) %>
+        <%#= link_to "Remove", user_pet_path(current_user, pet), :method => :delete, :data => {:confirm => "You Sure?"} %>
       </td>
     </tr>
     <% end %>

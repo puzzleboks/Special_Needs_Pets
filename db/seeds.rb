@@ -3,7 +3,7 @@ Need.destroy_all
 Treatment.destroy_all
 
 
-puzzle = Pet.create(name: "Puzzle", breed: "English Springer Spaniel", pict_url: "puzzle.jpg", age: 10, weight: "50 lbs", sex: male)
+puzzle = Pet.create(name: "Puzzle", breed: "English Springer Spaniel", pict_url: "puzzle.jpg", age: 10, weight: "50 lbs", sex: "male")
 
 galaxy = Pet.create(name: "Galaxy", breed: "Siamese", pict_url: "galaxy.jpg", age: 2, weight: "10 lbs", sex: "female")
 

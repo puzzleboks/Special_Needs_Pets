@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # alias user routes for account
   devise_for :users, :path => 'accounts'
 
-
   resources :pets do
     resources :needs
   end
@@ -13,6 +12,8 @@ Rails.application.routes.draw do
   resources :needs do
     resources :treatments
   end
+
+  # resources :treatments
 
   #devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

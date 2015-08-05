@@ -24,7 +24,7 @@
             <td><%= @pet.breed %></td>
           </tr>
           <tr>
-            <td><%= @pet.vet %></td>
+            <td><%= @pet.sex %></td>
           </tr>
           <tr>
             <td class="actions">
@@ -42,19 +42,19 @@
 
   <h2> Special Needs</h2>
   <ul>
-    <%# @pet.special_needs.each do |special_need| %>
+    <% @pet.needs.each do |need| %>
       <li>
-        <%#= special_need.title %>
+        <%= need.kind %>
         <h3>Treatments</h3>
         <ul>
-        <%# special_need.treatments.each do |treatment| %>
+        <% need.treatments.each do |treatment| %>
           <li>
-            <%#= treatment.title %>
+            <%= treatment.medicine %>
           </li>
-        <%# end %>
+        <% end %>
         </ul>
 
       </li>
-    <%# end %>
+    <% end %>
   </ul>
 </div>

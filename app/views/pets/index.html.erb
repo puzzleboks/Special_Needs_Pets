@@ -3,12 +3,12 @@
 
   <%= link_to("Add New Pet", new_pet_path(@pet), :class => 'action new') %>
 
-  <table class="listing" summary="Pet list">
-    <% @pets.each do |pet| %>
-    <tr>
-      <td><%= link_to image_tag(pet.pict_url), pet_path(pet) %></td>
-      <td><%= pet.name %></td>
-    </tr>
-    <% end %>
-  </table>
+  <!-- <table class="listing" summary="Pet list"> -->
+  <% @pets.each do |pet| %>
+    <div class="pets_list">
+      <p><%= link_to image_tag(pet.pict_url, width: '300', height: '300'), pet_path(pet) %></p>
+      <p><h3><%= pet.name %></h3></p>
+    </div>
+  <% end %>
+  <!-- </table> -->
 </div>

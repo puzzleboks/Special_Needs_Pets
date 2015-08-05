@@ -5,3 +5,11 @@
 img {
     border-radius: 50%;
 }
+
+.pets_list {
+  float: left;
+}
+
+.pets_list h3 {
+  text-align: center;
+}

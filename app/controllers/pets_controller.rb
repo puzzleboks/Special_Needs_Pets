@@ -30,7 +30,7 @@ class PetsController < ApplicationController
   def update
     @pet = current_user.pets.find(params[:id])
     if @pet.update(pet_params)
-      redirect_to user_pet_path
+      redirect_to pet_path
     else
       render 'edit'
     end

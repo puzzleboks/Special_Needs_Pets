@@ -1,5 +1,5 @@
 class Pet < ActiveRecord::Base
   belongs_to :user
-  has_many :special_needs
-  # has_many :treatments, through: :special_needs # pet.treatments
+  has_many :needs
+  has_many :treatments, through: :needs # pet.treatments
 end

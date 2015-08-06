@@ -1,2 +1,14 @@
-<h1>Needs#new</h1>
-<p>Find me in app/views/needs/new.html.erb</p>
+<h2>Create Need</h2>
+
+<%= form_for [@pet, @need] do |f| %>
+  <%= f.label :kind %>
+  <%= f.text_field :kind %>
+
+  <%= f.label :symptoms %>
+  <%= f.text_field :symptoms %>
+
+  <%= f.label :notes %>
+  <%= f.text_area :notes %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,3 +1,3 @@
 class Treatment < ActiveRecord::Base
-  belongs_to :needs
+  belongs_to :need
 end

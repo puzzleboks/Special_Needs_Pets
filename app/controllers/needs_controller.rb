@@ -1,33 +1,33 @@
 class NeedsController < ApplicationController
   def index
-    @pet = current_user.pets.find(params[:id])
-    @needs = @pet.needs.all
+    @pet = Pet.find(params[:pet_id])
+    @needs = @pet.need.all
   end
 
   def new
-    @pet = current_user.pets.build
+    @pet = Pet.find(params[:pet_id])
     @need = Need.new
   end
 
   def create
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     @need = @pet.needs.create(need_params)
 
     redirect_to pet_path(@pet)
   end
 
   def show
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     @need = Need.find(params[:id])
   end
 
   def edit
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     @need = Need.find(params[:id])
   end
 
   def update
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     @need = Need.find(params[:id])
     @need.update(need_params)
 
@@ -35,7 +35,7 @@ class NeedsController < ApplicationController
   end
 
   def destroy
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:pet_id])
     @need = Need.find(params[:id])
     @need.destroy
 
@@ -44,6 +44,6 @@ class NeedsController < ApplicationController
 
   private
   def need_params
-    params.require(:need).permit(:kind, :symptoms, :pet_id, :notes)
+    params.require(:need).permit(:kind, :symptoms, :created_at, :updated_at, :pet_id, :notes)
   end
 end

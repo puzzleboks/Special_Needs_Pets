@@ -11,7 +11,7 @@ class PetsController < ApplicationController
   end
 
   def new
-    @pet = current_user.pet.build
+    @pet = current_user.pets.build
   end
 
   def edit
@@ -19,7 +19,7 @@ class PetsController < ApplicationController
   end
 
   def create
-    @pet = current_user.pet.new(pet_params)
+    @pet = current_user.pets.new(pet_params)
     if @pet.save
       redirect_to pets_path
     else

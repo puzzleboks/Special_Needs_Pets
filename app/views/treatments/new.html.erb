@@ -1,2 +1,17 @@
-<h1>Treatments#new</h1>
-<p>Find me in app/views/treatments/new.html.erb</p>
+<h2>Create Treatment</h2>
+
+  <%= form_for @treatment, url: {action: "create"} do |f| %>
+  <%= f.label :medicine %>
+  <%= f.text_field :medicine %>
+
+  <%= f.label :dosage %>
+  <%= f.text_field :dosage %>
+
+  <%= f.label :every %>
+  <%= f.text_field :every %>
+
+  <%= f.label :notes %>
+  <%= f.text_area :notes %>
+
+  <%= f.submit %>
+<% end %>

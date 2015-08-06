@@ -1,6 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 /*.img-circle {
     border-radius: 50%;
 }*/
+
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 img {
     border-radius: 50%;
@@ -8,8 +19,10 @@ img {
 
 .pets_list {
   float: left;
+  margin: 10px 10px
+
 }
 
-.pets_list h3 {
+.pet_list h3 {
   text-align: center;
 }

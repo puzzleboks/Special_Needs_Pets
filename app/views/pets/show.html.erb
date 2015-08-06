@@ -23,21 +23,23 @@
   </table>
 
   <h2> Special Needs</h2>
-  <%#= link_to("Edit Needs", edit_pet_need_path(@pet, @needs)) %>
+  <%= link_to("Create New Need", new_pet_need_path(@pet)) %>
   <ul>
     <% @pet.needs.each do |need| %>
-      <%= link_to("Edit Needs", edit_pet_need_path(@pet, need)) %>
-      <li>
-        <%= need.kind %>
-        <h3>Treatments</h3>
-        <ul>
+    <li><%= need.kind %></li>
+    <%= link_to("Edit Need", edit_pet_need_path(@pet, need)) %>
+    <li>
+      <h3>Treatments</h3>
+      <%= link_to("Create New Treatment", new_need_treatment_path(need)) %>
+      <ul>
         <% need.treatments.each do |treatment| %>
-          <li>
-            <%= treatment.medicine %>
-          </li>
+        <li>
+          <%= treatment.medicine %>
+        </li>
+        <%= link_to("Edit Treatments", edit_need_treatment_path(need, treatment)) %>
         <% end %>
-        </ul>
-      </li>
+      </ul>
+    </li>
     <% end %>
   </ul>
 </div>

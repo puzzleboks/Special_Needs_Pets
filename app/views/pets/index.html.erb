@@ -1,25 +1,30 @@
+
+
 <div class="pets index">
-  <h2>User: <%= current_user.email %></h2>
-
-  <%= link_to("Add New Pet", new_pet_path(@pet), :class => 'action new') %>
-
+  <!-- <h2>User: <%#= current_user.email %></h2> -->
   <% @pets.each do |pet| %>
     <div class="pets_list">
-      <p><%= link_to image_tag(pet.pict_url, width: '300', height: '300'), pet_path(pet) %></p>
+      <p><%= link_to image_tag(pet.pict_url), pet_path(pet) %></p>
       <p><h3><%= pet.name %></h3></p>
     </div>
   <% end %>
 </div>
+  <div class="pets checklist">
+    <h2>Checklist:</h2>
+    <% @pets.each do |pet| %>
+      <div>
+        <p><%= pet.name %></p>
 
-<!-- set up a checklist on this page -->
-<div class="pets checklist">
-  <h2>Checklist:</h2>
-  <% @pets.each do |pet| %>
-    <div>
-      <p><%= pet.name %></p>
-      <% pet.treatments.each do |treatment| %>
-      <p><%= treatment.medicine %></p>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+        <% pet.treatments.each do |treatment| %>
+        <ul>
+          <li>
+            <%= check_box_tag(:treatment) %>
+            <%= label_tag(:treatment, treatment.medicine) %>
+            <%= label_tag(:treatment, treatment.dosage) %>
+            <%= label_tag(:treatment, treatment.every) %>
+          </li>
+        </ul>
+        <% end %>
+      </div>
+    <% end %>
+  </div>

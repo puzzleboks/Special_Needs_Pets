@@ -7,10 +7,14 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-/*.img-circle {
-    border-radius: 50%;
-}*/
+.title {
+  text-align: center;
 
+}
+
+header {
+  margin: 40px;
+}
 
 .container {
   width: 980px;

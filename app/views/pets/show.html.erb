@@ -26,10 +26,10 @@
   <%= link_to("Create New Need", new_pet_need_path(@pet)) %>
   <ul>
     <% @pet.needs.each do |need| %>
-    <li><%= need.kind %></li>
+    <li><h3><%= need.kind %></h3></li>
     <%= link_to("Edit Need", edit_pet_need_path(@pet, need)) %>
     <li>
-      <h3>Treatments</h3>
+      <h4>Treatments</h4>
       <%= link_to("Create New Treatment", new_need_treatment_path(need)) %>
       <ul>
         <% need.treatments.each do |treatment| %>

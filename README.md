@@ -14,14 +14,15 @@ The goals for the future would be to fill out the HTML structure, improve the st
 
 In order to install the Special Needs Pets app on your local machine, follow these steps:
 
-Fork/clone [this repo](https://github.com/puzzleboks/Special_Needs_Pets)
-Navigate to the Special Needs Pets directory
-Run the following commands in the terminal:
+1. Fork/clone [this repo](https://github.com/puzzleboks/Special_Needs_Pets)
+2. Navigate to the Special Needs Pets directory
+3. Run the following commands in the terminal:
 ```bash
 $ bundle install
 $ rake db:create db:migrate db:seed
 ```
-Run Postgresql
+4. Run Postgresql
+5. Run
 ```bash
 $ rails server
 ```

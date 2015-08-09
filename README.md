@@ -22,9 +22,9 @@ $ bundle install
 $ rake db:create db:migrate db:seed
 ```
 4. Run Postgresql
-5. Run
+5. Make sure rails server is running:
 ```bash
-$ rails server
+$ rails s
 ```
 
 ### Trello Schedule:
@@ -35,7 +35,7 @@ https://trello.com/b/baNp2PTF
 
 https://www.lucidchart.com/invitations/accept/e93d5ce6-29ac-421a-b826-bfce04834f24
 
-# User Stories:
+### User Stories:
 
 * As a user I want to be able to sign up (create user)
 * As an existing user I want to be able to log in and log out

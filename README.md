@@ -14,19 +14,19 @@ The goals for the future would be to fill out the HTML structure, improve the st
 
 In order to install the Special Needs Pets app on your local machine, follow these steps:
 
-1. Fork/clone [this repo](https://github.com/puzzleboks/Special_Needs_Pets)
-2. Navigate to the Special Needs Pets directory
-3. Run the following commands in the terminal:
+* Fork/clone [this repo](https://github.com/puzzleboks/Special_Needs_Pets)
+* Navigate to the Special Needs Pets directory
+* Run the following commands in the terminal:
 ```bash
 $ bundle install
 $ rake db:create db:migrate db:seed
 ```
-4. Run Postgresql
-5. Make sure rails server is running:
+* Run Postgresql
+* Make sure rails server is running:
 ```bash
 $ rails s
 ```
-6. Open a browser and go to localhost:3000/
+* Open a browser and go to localhost:3000/
 
 
 ### Trello Schedule:

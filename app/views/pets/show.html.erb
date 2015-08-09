@@ -9,13 +9,22 @@
       <td>
         <table>
           <tr>
-            <!-- <td><%#= @pet.name %></td> -->
+            <td>Breed: <%= @pet.breed %></td>
           </tr>
           <tr>
-            <td><%= @pet.breed %></td>
+            <td>Gender: <%= @pet.sex %></td>
           </tr>
           <tr>
-            <td><%= @pet.sex %></td>
+            <td>Weight: <%= @pet.weight %> lbs.</td>
+          </tr>
+          <tr>
+            <td>Age: <%= @pet.age %> years</td>
+          </tr>
+          <tr>
+            <td>Notes:</td>
+          </tr>
+          <tr>
+            <td><%= @pet.notes %></td>
           </tr>
         </table>
       </td>

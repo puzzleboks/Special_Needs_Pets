@@ -26,14 +26,18 @@ $ rake db:create db:migrate db:seed
 ```bash
 $ rails s
 ```
+6. Open a browser and go to localhost:3000/
+
 
 ### Trello Schedule:
 
 https://trello.com/b/baNp2PTF
 
+
 ### Entity Relationship Diagram:
 
 https://www.lucidchart.com/invitations/accept/e93d5ce6-29ac-421a-b826-bfce04834f24
+
 
 ### User Stories:
 

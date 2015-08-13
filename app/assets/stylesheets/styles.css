@@ -47,6 +47,7 @@ header {
   padding: .2em 1em;
 }
 
+/*mms: recommend you move pets sepcific styling to pets.scss*/
 .pets.index{
 float:left;
 width:70%;

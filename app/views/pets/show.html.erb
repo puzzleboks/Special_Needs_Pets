@@ -3,6 +3,7 @@
 
   <%= link_to("Edit Pet", edit_pet_path(@pet), :class => 'action edit') %>
 
+  <!-- mms: tables are usually only used to manage tabluar (row and column) data. -->
   <table class="detail" summary="Pet detail">
     <tr>
       <td><%= image_tag(@pet.pict_url, width: '200', height: '200') %></td>
@@ -35,6 +36,7 @@
   <%= link_to("Create New Need", new_pet_need_path(@pet)) %>
   <ul>
     <% @pet.needs.each do |need| %>
+    <!-- mms: thought experiment: should all the treaments be nested in the Need's li? -->
     <li><h3><%= need.kind %></h3></li>
     <%= link_to("Edit Need", edit_pet_need_path(@pet, need)) %>
     <li>

@@ -14,11 +14,13 @@
     <% @pets.each do |pet| %>
       <div>
         <p><%= pet.name %></p>
-
+        <!-- mms: good use of pet.treatments to bypass the need for listing "needs". -->
+        <!-- mms:  Now we need to think about "What, specifically, should happen when a user clicks this?" -->
         <% pet.treatments.each do |treatment| %>
         <ul>
           <li>
             <%= check_box_tag(:treatment) %>
+            <!-- mms: three labels for one checkbox?  I recommend a new method on treatment: `treatment.summary`. Then you can tweak it easily. -->
             <%= label_tag(:treatment, treatment.medicine) %>
             <%= label_tag(:treatment, treatment.dosage) %>
             <%= label_tag(:treatment, treatment.every) %>

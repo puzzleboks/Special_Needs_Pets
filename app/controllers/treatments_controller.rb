@@ -23,15 +23,18 @@ class TreatmentsController < ApplicationController
   # end
 
   def edit
+    # mms: you probably want limit this to the current need (pet? user?).
     @treatment = Treatment.find(params[:id])
   end
 
   def update
     @need = Need.find(params[:need_id])
     @pet = @need.pet
+    # mms: same here.  `@pet.treatments.find(params[:id])`
+    # mms: routes control the interface to your app - not the associations you use within.
     @treatment = Treatment.find(params[:id])
     @treatment.update(treatment_params)
-
+    # mms: what happens when the update fails?
     redirect_to pet_path( @pet )
   end
 
